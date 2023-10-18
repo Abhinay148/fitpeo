@@ -1,6 +1,6 @@
 import React from "react";
 import {RiSettingsLine} from 'react-icons/ri'
-import {MdKeyboardArrowRight,MdKeyboardArrowDown,MdHelpCenter,MdSettings,MdMoney,MdPerson2,MdProductQuantityLimits} from 'react-icons/md'
+import {MdKeyboardArrowRight,MdKeyboardArrowDown,MdHelpCenter,MdSettings,MdMoney,MdPerson2,MdProductionQuantityLimits} from 'react-icons/md'
 import {FaRegUserCircle} from 'react-icons/fa'
 
 function Sidebar({OpenSidebarToggle, OpenSidebar}){
@@ -21,7 +21,7 @@ function Sidebar({OpenSidebarToggle, OpenSidebar}){
                 </li>
                 <li className="sidebar-list-item">
                     <a href="">
-                    <MdProductQuantityLimits className='icon'/> Product
+                    <MdProductionQuantityLimits className='icon'/> Product
                     </a>
                     <MdKeyboardArrowRight className='left-icon'/>
                 </li>

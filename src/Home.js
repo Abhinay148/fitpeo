@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import logo from './logo.svg'
-import { RiMoneyDollarCircleline, RiListOrdered2,RiMoneyCnyBoxFill,RiShoppingBagFill}from 'react-icons/ri'
+import { RiMoneyDollarCircleLine, RiListOrdered2,RiMoneyCnyBoxFill,RiShoppingBagFill}from 'react-icons/ri'
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,PieChart, Pie, Sector } from 'recharts';
 function Home(){
 
@@ -102,7 +102,7 @@ function Home(){
             <div className='main-cards'>
             <div className='card'>
                 <div className='card-inner'>
-                  <RiMoneyDollarCircleline className='card_icon'/>   
+                  <RiMoneyDollarCircleLine className='card_icon'/>   
                 </div>
                 <div className="card-details">
                   <h3>Earning</h3>
