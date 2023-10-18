@@ -1,0 +1,374 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  color: black;
+  font-family: 'Montserrat',sans-serif;
+}
+
+.icon{
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+}
+
+.icon .icon_header{
+  margin-right: 5px;
+}
+
+.close_icon{
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.container{
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas: 
+    'sidebar header header header'
+    'sidebar main main main';
+    height: 100vh;
+}
+
+.header{
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+}
+.header-right{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: stretch;
+}
+.search{
+  border:none;
+  padding:0;
+}
+input.submit{
+  width:100px;
+  border: 1px solid #555;
+  padding:9px 4px 9px 40px;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+
+}
+.menu-icon {
+  display: none;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #042053;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.left-icon{
+  color: white;
+  position:relative;
+  right:0;
+}
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #9e9ea4;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  z-index: 12 !important;
+}
+
+.user-card {
+  cursor:pointer;
+  display: flex;
+  background-color: #2962ff;
+  align-items: center;
+  margin: 20px;
+  position:absolute;
+  bottom:30px;
+  padding: 10px;
+}
+
+.user-icon {
+  flex: 0 0 auto; /* Remove the flex to avoid space */
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.user-info {
+  flex: 1; 
+  text-align: left; 
+  padding: 2px;
+}
+
+.down {
+  flex: 0 0 auto;
+
+  right: 0;
+}
+.user-info h4, .user-info h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: row; /* Change to row */
+  justify-content: flex-start; /* Adjust the alignment */
+  align-items: center; /* Adjust the alignment */
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.card:first-child {
+  background-color: #2962ff;
+}
+
+.card:nth-child(2) {
+  background-color: #ff6d00;
+}
+
+.card:nth-child(3) {
+  background-color: #2e7d32;
+}
+
+.card:nth-child(4) {
+  background-color: #d50000;
+}
+
+.card-inner {
+ display: flex;
+  align-items: center;
+  justify-content: center; /* Center the icon */
+  border-radius: 50%; /* Make it a circle */
+  width: 120px; /* Adjust the size as needed */
+  height: 120px; /* Adjust the size as needed */
+  background-color: rgba(0, 0, 0, 0.3);
+  margin:10px;
+}
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 15px; /* Adjust the spacing between the icon and details */
+}
+
+.card-details h3, .card-details h1, .card-details h5 {
+  margin: 0; /* Remove default margin to eliminate spacing */
+}
+.card-inner > .card_icon {
+  padding:20px;
+  font-size: 80px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Adjust the column widths */
+  gap: 20px;
+  margin-top: 60px;
+
+}
+
+.bar-chart-box {
+  background-color: #efcfcf;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff; 
+}
+.bar-chart-box h3,h5{
+  margin:0;
+}
+.round{
+  margin: 40px;
+  justify-content: center;
+  border-radius: 50%; /* Make it a circle */
+  width: 350px; /* Adjust the size as needed */
+  height: 350px; /* Adjust the size as needed */
+  background-color: rgba(255, 255, 255, 0.984);
+}
+.pie-chart-box {
+  align-items: left;
+  background-color: #000;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+.pie-chart-box h3,h6{
+  margin: 0;
+}
+.interval{
+  padding: 3px;
+  border-radius: 5px;
+  color:black;
+  float:right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+/* Add these styles to your existing CSS file or create a new one */
+
+.table {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+ 
+  overflow: auto; /* Add a scroll if the table overflows */
+}
+
+.table h3 {
+  color:black;
+  margin: 0;
+}
+.header-right {
+  display: flex;
+  flex-direction:row;
+
+}
+.table-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.table-options select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead {
+  background-color: #f5f5f5;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #f4f3f3;
+}
+.product-info{
+  display:flex;
+}
+.info{
+  margin:5px;
+}
+/* Style the table header row */
+table th {
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+th,td{
+  color:black;
+}
+/* Add alternating row colors to the table */
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+@media screen and (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+/* Small <= 768px */
+  
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .hedaer-left {
+    display: none;
+  }
+}
